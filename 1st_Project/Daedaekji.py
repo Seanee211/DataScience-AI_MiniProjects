@@ -1,24 +1,40 @@
-# 1. 좋아하는 음식들 저장 후
-# 2. 기존에 큐레이트 해놨던 모든 메뉴들을 무작위로 한가지 추천:
-# 3. 리스트 초기화를 통해 새로운 목록 생성
-# 4. 세가지의 키워드만 입력 : 배고파, 대댁지?, 배불러
+# 서비스 "대댁지"의 핵심 기능들
+# (Core Functions for the random-food-choice service: "Daedaekji")
 
+# 1. 좋아하는 음식들 저장 후
+# (1. save the foods you like)
+
+# 2. 기존에 큐레이트 해놨던 모든 메뉴들을 무작위로 한가지 추천:
+# (2. Randomly choose one of the menus the user has saved/curated)
+
+# 3. 리스트 초기화를 통해 새로운 목록 생성
+# (3. resetting the previous food list and making a new list)
+
+# 4. 세가지의 키워드만 입력 : '배고파', '대댁지?', '배불러'
+# (4. Three keywords to type : 'Im hungry', 'WhatDoIEat?', 'Im full' )
 
 
 # 첫번째 기능) 좋아하는 메뉴 저장 =====================================================================================
+# (First Function) Save your favorite menu =========================================================================)
 
 # 좋아하는 메뉴를 저장할 수 있는 파일:
+# (The file for saving the user's favorite menus)
 filename= "C:\\Users\\KDP-23\Desktop\\python_Sean\\PROJECT\\food_list.txt"
+
 # 기존에 먹었던 메뉴를 저장할 수 있는 파일:
+# (The file for saving the user's previous menu chosen before)
 same_count_list = 'C:\\Users\KDP-23\\Desktop\\python_Sean\\PROJECT\\same_count.txt'
 
 
 # 좋아하는 메뉴 파일:
+# (favorite menu file)
 with open(filename, mode='a', encoding='utf-8') as fp:
     while True:      
         try:
             # 좋아하는 음식 원하는대로 저장 input:
+            # The input function for saving the user's favorite food:
             menu = input('좋아하는 음식 저장(예: 짜장면) "배불러" 입력시 저장 종료) : ')
+            
             # 배불러 입력시 메뉴 랜덤 추출하고 결정하는 단계로 진입:
             if menu  == '배불러':
                 break
