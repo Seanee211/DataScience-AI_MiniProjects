@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>우유곽 분리수거 가이드</title>
+    <style>
+
+    @font-face {
+    font-family: 'NanumSquareNeoAlt';
+    src: url('NANUMSQUARENEO-ALT.TTF'); /* IE9 Compat Modes */
+    }
+   
+    body {
+        font-family: 'NanumSquareNeoAlt', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: 
+            linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+            url('배경이미지2.png');
+        background-repeat: no-repeat; 
+        background-size: cover;
+        background-position: center;
+        position:relative; 
+    }
+
+    .container {
+        width: 80%;
+        margin:auto;
+        overflow: hidden;
+        align-items: center; 
+    }
+        
+    header{
+        background:#ffffff; 
+        color:rgb(0, 0, 0);
+	    text-align:center;
+        text-shadow: 
+        40px 0px 40px #9ac99a,   /* 오른쪽 */
+        -40px 0px 40px #9ac99a,   /* 왼쪽 */
+        0px -40px 40px #9ac99a,   /* 위쪽 */
+        0px 40px 40px #9ac99a;    /* 아래쪽 */
+	    padding-top:30px; 
+	    min-height:70px; 
+	    border-bottom:#77c97e 3px solid; 
+        
+    }
+
+	#disposal-guide {
+	    padding:20px; 
+	    margin-top :20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+	}
+
+	#disposal-guide h2{
+	     color:black;
+         text-align: center;
+	}
+
+    #disposal-content {
+	    padding:20px; 
+	    margin-top :5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+	}
+
+    .content-item {
+    text-align: center;  /* 텍스트를 중앙 정렬 */
+    margin-bottom: 100px;  /* 아래쪽에 여백 추가 */
+    font-size: 15px;
+    }
+
+    .content-item img {
+    display: block;  /* 이미지를 블록 요소로 설정 */
+    margin: 10px auto;  /* 이미지 위아래에 여백 추가 및 중앙 정렬 */
+    width: 300px;
+    height: auto;
+    box-shadow: 5px 5px 5px rgb(53, 52, 52);
+    border-radius: 0.5cm;
+    }
+
+    ol {
+    list-style: none; /* 기본 숫자형 목록 표시 제거 */
+    counter-reset: step-counter; /* 카운터 초기화 */
+    }
+
+    li::before {
+        counter-increment: step-counter; /* 카운터 증가 */
+        content: "Step " counter(step-counter) ": "; /* Step과 카운터 값을 함께 출력 */
+        font-size: 1.5em; /* 폰트 크기 조절 */
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+        <h1>우유곽 분리수거 가이드</h1>  
+        <!-- 메인페이지에서 가져온 이미지 (예: 우유곽 사진 올리면 그대로) -->
+        <img src="서울우유2.png" alt="image for milkpack" style="width: 250px; height:auto; "/>
+        <h3>이 쓰레기는 "종이"로 분리해요</h3>
+        </div>    
+    </header>
+        <!-- 우유곽 예시 이미지 -->
+        <div class="container" id="disposal-guide">
+            <div style="display: flex;">
+                <img src="우유곽 일러스트_웹용2.png" alt="small icon" style="width: 100px; height: auto; margin-right: 0.1 px; transform: rotate(10deg);">
+                <div>
+                    <h2>우유곽은 어떤 종류의 쓰레기인가요?</h2>
+                    <p>"우유곽은 일반적으로 종이로 만들어져 있고 재활용이 가능해요!"</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container" id="disposal-content">
+            <ol type="1">
+                <li>
+                    <div class="content-item">
+                        <strong>비우기:</strong> 우유 곽 안에 남아있는 내용물을 모두 비워요.
+                        <img src="20230910_134037.jpg" alt="image for milkpack"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="content-item">
+                        <strong>세척하기:</strong> 우유 곽 안쪽을 물로 잘 헹궈서 깨끗하게 해요.
+                        <img src="20230910_134115.jpg" alt="image for milkpack"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="content-item">
+                        <strong>말리기:</strong> 세척한 후에는 충분히 말려요.
+                        <img src="20230910_134245.jpg" alt="image for milkpack"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="content-item">
+                        <strong>압착하기:</strong> 우유 곽을 압착해서 공간을 절약해보아요.
+                        <img src="20230910_134305.jpg" alt="image for milkpack"/>
+                    </div>
+                </li>
+                <li>
+                    <div class="content-item">
+                        <strong>분리수거:</strong> 종이류 재활용통에 버려요.
+                        <img src="20230910_134425.jpg" alt="image for milkpack"/>
+                    </div>
+                </li>
+            </ol>
+        </div>
+</body>
+</html>
