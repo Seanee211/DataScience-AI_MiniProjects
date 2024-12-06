@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Estimation Service</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <div class="login-button-container">
+            {% if session['user'] %}
+                <a href="/logout" class='submit-button' style="border-radius: 5px;">로그아웃</a> 
+            {% else %}
+                <a href="/signup" class='submit-button' style="border-radius: 5px;">회원가입</a> 
+                <a href="/login" class='submit-button' style="border-radius: 5px;">로그인</a> 
+            {% endif %}
+        </div>
+        
+    <div class="form-container">
+        <h1>초보 셀러를 위한 가격 책정 서비스</h1>
+        <form action="/estimate_price" method="post">
+            <!-- <label for="product_category">제품군</label><br/>
+            <input type="text" id="product_category" name="product_category"><br/> -->
+
+            <label for="purchase_count">구매 건수:</label><br/>
+            <input type="number" id="purchase_count" name="purchase_count"><br/>
+
+            <label for="review_count">리뷰 건수:</label><br/>
+            <input type="number" id="review_count" name="review_count"><br/>
+
+            <label for=like_count>찜 건수:</label><br/>
+            <input type=number id=like_count name=like_count><br/>
+
+            <label for=unit_cost>개당 원가:</label><br/>
+            <input type=number id=unit_cost name=unit_cost><br/>
+
+            <!-- Submit button -->
+            <!-- Add a class to style the button -->
+            	<input class='submit-button' type='submit' value='Submit' style="border-radius: 5px;">
+        </form>
+    </div>
+</body>
+</html>
